@@ -82,13 +82,61 @@
 
 
 # copy - возвращает копию списка 
-list1 = [1,2,3]
-list2 = list1.copy()
+# list1 = [1,2,3]
+# list2 = list1.copy()
 
-# extend - расширяет список другим списком
-list1 = [1, 2, 3]
-list2 = [5, 6, 7]
-list1.append(list2)
-print(list1) 
+# # extend - расширяет список другим списком
+# list1 = [1, 2, 3]
+# list2 = [5, 6, 7]
+# list1.append(list2)
+# print(list1) 
 
-list1.extend(list2)
+# list1.extend(list2)
+
+# list_ = input()
+# print(list_.split(','))
+# print(list_)
+# # list(list_)
+
+# # list_.sort()
+# # print(list_)
+
+# list_ = [1, 2, 3]
+# # for i in range(len(list_)):
+# #     print(list_[i])
+# #     for x in range(1, len(list_)):
+# #         print(list_[i] == list_[x])
+
+# res = []
+
+# for el in list_:
+#     for ind in range(1, len(list_)):
+#         if el == list_[ind]:
+#             res.append(el)
+
+# print(res)
+# str_list = ['abc', 'xyz', 'aba', '1221']
+# indexs = []
+# for i in str_list:
+#     if i[0] == i[-1]:
+#         index1 = str_list.index(i)
+#         indexs.append(index1)
+# print(indexs)
+        
+# list_ = [1, 'abcd', 3, '1', 4, 'xyz', 5, 'pqr', 7, 5, 12]
+# for i in list_:
+#     if i.isdigit():
+#         sum1 = i[0] + i[0+1]
+# print(sum1)
+
+
+# colors1 = ["red", "orange", "green", "blue", "white"]
+# colors2 = ["black", "yellow", "green", "blue"]
+
+# diff1 = set(colors1) - set(colors2)
+# diff2 = set(colors2) - set(colors1)
+# diff1 = list(diff1)
+# diff2 = list(diff2)
+# result = diff1.extend(diff2)
+
+# print(result)

@@ -43,11 +43,11 @@
 # # 0, 1, 2, 4, 5, 6, 7, 8, 9
 
 
-list2 = [1, 2, 3, 4, 5, 6, 7,1,1,1,1]
-# list2.clear()
-# print(list2)
+# list2 = [1, 2, 3, 4, 5, 6, 7,1,1,1,1]
+# # list2.clear()
+# # print(list2)
 
-while 1 in list2:
-    list2.remove(1)
-print(list2)
+# while 1 in list2:
+#     list2.remove(1)
+# print(list2)
 
