@@ -135,58 +135,58 @@
 # print(samsung21.show_time()) 
 
 
+   ### 7    
+
+# import datetime
 
 
-import datetime
+# class SmartPhones:
+#     battery = 0
+#     def __init__(self, name, color, memory) -> None:
+#         self.name = name
+#         self.color = color
+#         self.memory = memory
 
-
-class SmartPhones:
-    battery = 0
-    def __init__(self, name, color, memory) -> None:
-        self.name = name
-        self.color = color
-        self.memory = memory
-
-    def __str__(self) -> str:
-        return self.name + ' ' + self.memory
+#     def __str__(self) -> str:
+#         return self.name + ' ' + self.memory
     
-    def charge(self, num):
-        self.battery += num
-        return self.battery
+#     def charge(self, num):
+#         self.battery += num
+#         return self.battery
     
-class Iphone(SmartPhones):
-    def __init__(self, name, color, memory, ios) -> None:
-        self.name = name
-        self.color = color
-        self.memory = memory
-        self.ios = ios
+# class Iphone(SmartPhones):
+#     def __init__(self, name, color, memory, ios) -> None:
+#         self.name = name
+#         self.color = color
+#         self.memory = memory
+#         self.ios = ios
 
-    def send_imessage(self, meassage):
-        res = f'sending {meassage} from {self.name} {self.memory }'
-        return res
+#     def send_imessage(self, meassage):
+#         res = f'sending {meassage} from {self.name} {self.memory }'
+#         return res
 
-class Samsung(SmartPhones):
-    def __init__(self, name, color, memory, android) -> None:
-        self.name = name
-        self.color = color
-        self.memory = memory
-        self.android = android
+# class Samsung(SmartPhones):
+#     def __init__(self, name, color, memory, android) -> None:
+#         self.name = name
+#         self.color = color
+#         self.memory = memory
+#         self.android = android
 
-    def show_time(self):
-        self.time_ = datetime.datetime.now().time()
-        return self.time_
+#     def show_time(self):
+#         self.time_ = datetime.datetime.now().time()
+#         return self.time_
 
 
-phone = SmartPhones('generic', 'blue', '128GB') 
-print(phone)
+# phone = SmartPhones('generic', 'blue', '128GB') 
+# print(phone)
 
-print(phone.battery) 
-phone.charge(20) 
-print(phone.battery) 
+# print(phone.battery) 
+# phone.charge(20) 
+# print(phone.battery) 
 
-iphone7 = Iphone('Iphone 7', 'gold', '128gb', '12.1.3') 
-print(iphone7)
-print(iphone7.send_imessage('hello')) 
+# iphone7 = Iphone('Iphone 7', 'gold', '128gb', '12.1.3') 
+# print(iphone7)
+# print(iphone7.send_imessage('hello')) 
 
-samsung21 = Samsung('Samsung A21', 'black', '256gb', 'Oreo') 
-print(samsung21.show_time()) 
+# samsung21 = Samsung('Samsung A21', 'black', '256gb', 'Oreo') 
+# print(samsung21.show_time())   
