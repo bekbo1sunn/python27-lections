@@ -190,3 +190,91 @@
 
 # samsung21 = Samsung('Samsung A21', 'black', '256gb', 'Oreo') 
 # print(samsung21.show_time())   
+
+
+# class CustomError(Exception):
+#     def __init__(self, word):
+#         self.word = word
+        
+
+#     def capitals_error(self, capitals_error):
+#             raise capitals_error('ТОЛЬКО БОЛЬШИЕ БУКВЫ РАЗРЕШЕНЫ В ЭТОМ КОДЕ')
+        
+# def check_letters(string:str):
+#     if string.isupper():
+#         print(f'ВСЕ ОТЛИЧНО! {string}')
+#     else:
+#         string = CustomError(string)
+#         string.capitals_error()
+
+# check_letters("hello")
+   ### 8 
+# верный ответ
+
+# class CustomError(Exception): 
+#    def __init__(self, message): 
+#       self.message = message 
+# capitals_error = CustomError('ТОЛЬКО БОЛЬШИЕ БУКВЫ РАЗРЕШЕНЫ В ЭТОМ КОДЕ')
+
+# def check_letters(message1): 
+#    if message1 == message1.upper(): 
+#       return f'ВСЕ ОТЛИЧНО! {message1}' 
+#    else: 
+#       raise capitals_error 
+   
+# print(check_letters("hello"))
+
+
+
+
+
+# class Person:
+#     def __init__(self, name, last_name):
+#         self.name = name
+#         self.last_name = last_name
+
+#     def get_info(self):
+#         return f'Привет, меня зовут {self.name} {self.last_name}'
+
+
+# class Employee(Person):
+#     def __init__(self,name, last_name, work, status):
+#         self.name = name
+#         self.last_name =last_name
+#         self.work = work
+#         self.status = status
+
+#     def get_info(self):
+#         return f'Привет, меня зовут {self.name} {self.last_name}, я работаю в компании {self.work} на должности {self.status}'
+
+
+
+# class Student(Person):
+#     def __init__(self,name, last_name, university, course):
+#         self.name = name
+#         self.last_name =last_name
+#         self.university = university
+#         self.course = course
+
+#     def get_info(self):
+#         return f'Привет, меня зовут {self.name} {self.last_name}, я учусь в {self.university} на {self.course} курсе'
+
+# def get_human_info(string):
+#     print(string.get_info())
+
+# employee = Employee('Иван', 'Петров','Рога и копыта', 'директор')
+# student = Student('Иван', 'Петров','КГТУ', 3)
+# person = Person('Иван', 'Петров')
+
+# get_human_info(employee) 
+# get_human_info(student) 
+# get_human_info(person) 
+
+
+from abc import abstractmethod
+class Shape:
+    @abstractmethod
+    def get_area(self):
+        pass
+    
+    
