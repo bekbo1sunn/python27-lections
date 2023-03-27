@@ -687,3 +687,101 @@
 
 
     
+# products = [
+#   {
+#     'title': 'Samsung S10', 
+#     'price': 800, 
+#     'count': 6, 
+#     'category': 'samsung'},
+#   {
+#     'title': 'iPhone 13 Pro', 
+#     'price': 1200, 
+#     'count': 9, 
+#     'category': 'apple'},
+#   {
+#     'title': 'Xiaomi Mi 10', 
+#     'price': 500, 
+#     'count': 2, 
+#     'category': 'xiaomi'},
+#   {
+#     'title': 'Samsung S9', 
+#     'price': 600, 
+#     'count': 4, 
+#     'category': 'samsung'},
+#   {
+#     'title': 'iPhone 11', 
+#     'price': 850, 
+#     'count': 1, 
+#     'category': 'apple'}
+# ]
+
+# def func20(list_, string):
+#     res = []
+#     for i in list_:
+#          if string.lower() in i['title'].lower():
+#             res.append(i)
+#     return res
+# print(func20(products, 'i'))
+
+
+   ### 22
+# balance = 0
+# def spent(x, y, z):
+#    #  global balance
+#     dict_ = {}
+#     dict_['target'] = x
+#     dict_['spend'] = y
+#     if z >= y:
+#         z = z - y
+#         return (dict_, z)
+    
+        
+#     else:
+#         return 'Недостаточно средств'
+    
+# def deposit(w, a):
+#     a = a + w
+#     return a
+
+# deposit(1000, balance)
+# print(spent('apple', 100, balance))
+
+
+
+database = []
+def create(database, title, price, category):
+    dict_ = {}
+    dict_['title'] = title
+    dict_['price'] = price
+    dict_['category'] = category
+    database.append(dict_)
+    print(database)
+
+
+def read(database):
+    print(database)
+
+
+def update(database, index, title, price, category):
+    database1 =  database[index]
+    database1['title'] = title
+    database1['price'] = price
+    database1['category'] = category
+    print(database)
+
+# print(update(database, 0, 'mandarin', 75, 'product'))
+
+def delete(database, index):
+    database.pop(index)
+    return database
+
+create(database, 'apple', 70, 'fruits')
+# read(database)
+update(database, 0, 'mandarin', 50, 'products')
+
+print(delete(database, 0))
+
+
+
+
+
