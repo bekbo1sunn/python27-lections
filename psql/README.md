@@ -229,3 +229,80 @@ SELECT * FROM developer
 JOIN dev_proj ON developer.id = dev_proj.dev_id
 JOIN project ON project.id = dev_proj.proj_id;
 ```
+
+# Агрегатные функции 
+> все агрегатные функции используются с `group by`
+
+**SUM** - считает сумму всех записей в сгруппированном поле
+```sql
+SELECT customer.name, SUM(product.price) from customer 
+JOIN cart ON customer.id = cart.customer_id
+JOIN product ON product.id = cart.product_id
+group by (customer.name);
+```
+
+> **AVG** - cчитает среднее значение
+```sql 
+SELECT customer.name, ROUND(AVG(product.price)) FROM customer 
+JOIN cart ON customer.id = cart.customer_id
+JOIN product ON product.id = cart.product_id
+group by (customer.name);
+
+    name    |         avg          
+------------+----------------------
+ customer 2 | 470
+ customer 3 | 344
+ customer 1 | 359
+(3 rows)
+```
+
+> **ARRAY_AGG** - собирает значение в сгруппированном поле в массив
+```sql
+select blogger.name, ARRAY_AGG(post.body) FROM blogger
+JOIN post on blogger.id = post.blogger_id
+GROUP BY (blogger.id);
+   name    |                         array_agg                         
+-----------+-----------------------------------------------------------
+ blogger 1 | {"my first blog","today is a good day","it is my b-day!"}
+ blogger 2 | {"my first post","some post"}
+ blogger 3 | {"i am not a blogger"}
+(3 rows)
+```
+
+>**MIN/MAX** - выбирает мин/макс знаечение из всех записей в сгруппированном поле
+```sql
+select blogger.name, MAX(post.created_at), MIN(post.created_at) FROM blogger
+JOIN post on blogger.id = post.blogger_id
+GROUP BY (blogger.id);
+   name    |    max     |    min     
+-----------+------------+------------
+ blogger 2 | 2022-06-12 | 2013-05-10
+ blogger 3 | 2022-08-11 | 2022-08-11
+ blogger 1 | 2021-09-01 | 2020-01-08
+```
+
+> **COUNT** считает кол-во записей в сгруппированном поле
+
+```sql
+select blogger.name, COUNT(post.id) FROM blogger
+JOIN post on blogger.id = post.blogger_id
+GROUP BY (blogger.id) ORDER BY (blogger.name);
+   name    | count 
+-----------+-------
+ blogger 1 |     3
+ blogger 2 |     2
+ blogger 3 |     1
+```
+
+
+# Import/Export
+**Import**
+```bash
+psql db_name < file.sql
+```
+**Export**
+```bash
+psql db_name > file.sql
+```
+
+
